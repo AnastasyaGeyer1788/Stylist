@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Цифровой стилист — доступная альтернатива</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="logo"><span class="dot"></span>Цифровой стилист<span style="color:var(--violet)"></span></div>
+        <div class="nav-links">
+          <a href="#values">Почему мы</a>
+          <a href="#demo">Попробовать</a>
+          <a href="#how">Как работает</a>
+        </div>
+        <a href="#demo" class="btn btn-primary">Собрать образ →</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <span class="eyebrow"><span class="pulse"></span> Доступная альтернатива стилисту</span>
+        <h1>Твой гардероб.<br>Твои образы.<br><span class="hand">каждый день</span></h1>
+        <p class="lead">Загрузи фото вещей — нейросеть соберёт готовые луки под погоду, повод и настроение. Без записи к стилисту, без бесконечных примерок и лишних покупок.</p>
+        <div class="hero-cta">
+          <a href="#demo" class="btn btn-primary">Попробовать бесплатно</a>
+          <a href="#how" class="btn btn-ghost">Как это работает</a>
+        </div>
+        <div class="trust">
+          <div class="trust-item"><span style="font-size:22px">⏱</span><div><b>2 мин</b>на сбор образа</div></div>
+          <div class="trust-item"><span style="font-size:22px">💸</span><div><b>199 ₽</b>вместо стилиста</div></div>
+          <div class="trust-item"><span style="font-size:22px">👗</span><div><b>100%</b>из твоего шкафа</div></div>
+        </div>
+      </div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="mini-card">
+            <div class="mini-thumb v">🧥</div>
+            <div><strong>Блейзер</strong><small>верх · офис</small></div>
+            <span class="mini-tag">в образе</span>
+          </div>
+          <div class="mini-card">
+            <div class="mini-thumb l">👖</div>
+            <div><strong>Джинсы</strong><small>низ · кэжуал</small></div>
+            <span class="mini-tag">в образе</span>
+          </div>
+          <div class="mini-card">
+            <div class="mini-thumb c">👟</div>
+            <div><strong>Кроссовки</strong><small>обувь · спорт</small></div>
+            <span class="mini-tag">в образе</span>
+          </div>
+          <div class="phone-badge">Образ собран за 1.8 сек ✦</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЦЕННОСТИ -->
+  <section id="values">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">почему это работает</span>
+        <h2>Стилист, который всегда под рукой</h2>
+        <p>Четыре причины, по которым цифровой стилист экономит время и деньги — и при этом реально помогает выглядеть лучше.</p>
+      </div>
+      <div class="values">
+        <div class="value">
+          <div class="ico">⏱️</div>
+          <h3>Экономия времени</h3>
+          <p>Больше не стоишь у шкафа 20 минут. Готовый образ — за пару кликов, утром перед выходом.</p>
+        </div>
+        <div class="value">
+          <div class="ico">🎯</div>
+          <h3>Персонализация</h3>
+          <p>Учитываем твой стиль, фигуру, погоду и повод. Не абстрактные тренды, а вещи, которые у тебя есть.</p>
+        </div>
+        <div class="value">
+          <div class="ico">👚</div>
+          <h3>Личный гардероб</h3>
+          <p>Собираем образы только из твоих вещей. Никаких «купите это», пока ты сам не захочешь.</p>
+        </div>
+        <div class="value">
+          <div class="ico">♻️</div>
+          <h3>Рациональность</h3>
+          <p>Открываешь вещи, которые забыл. Меньше импульсивных покупок — больше осознанных образов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ДЕМО -->
+  <section id="demo">
+    <div class="wrap">
+      <div class="demo">
+        <div class="demo-inner">
+          <div>
+            <h2>Попробуй <span>прямо сейчас</span></h2>
+            <p class="sub">Загрузи 3–5 фото вещей (или нажми на карточки-примеры) — и мы соберём образ.</p>
+
+            <div class="dropzone" id="dropzone">
+              <span class="big-ico">📸</span>
+              <b>Перетащи фото вещей сюда</b>
+              <small>или нажми, чтобы выбрать · JPG, PNG до 10 МБ</small>
+            </div>
+            <input type="file" id="fileInput" accept="image/*" multiple hidden />
+
+            <div class="thumbs" id="thumbs"></div>
+
+            <div class="demo-actions">
+              <button class="btn btn-lime" id="generateBtn">✦ Собрать образ</button>
+              <button class="btn btn-ghost" id="demoFillBtn" style="color:#fff;border-color:rgba(255,255,255,.3)">Заполнить примером</button>
+            </div>
+          </div>
+
+          <div class="result" id="result">
+            <div class="placeholder">
+              <span class="em">✨</span>
+              Здесь появится твой образ.<br>Добавь вещи слева и нажми «Собрать образ».
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАК РАБОТАЕТ -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">три шага</span>
+        <h2>Как это работает</h2>
+        <p>Никаких сложных настроек. Загрузил — собрал — вышел.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="s-ico">📷</span>
+          <h3>Загрузи гардероб</h3>
+          <p>Фотографируй вещи на вешалке или в разложенном виде. Нейросеть распознает категорию, цвет и сезонность.</p>
+        </div>
+        <div class="step">
+          <span class="s-ico">🧠</span>
+          <h3>Получи образ</h3>
+          <p>Алгоритм сочетает вещи по цвету, поводу и погоде. Каждый образ — с объяснением, почему это работает.</p>
+        </div>
+        <div class="step">
+          <span class="s-ico">✨</span>
+          <h3>Примерь и выходи</h3>
+          <p>Посмотри, как образ смотрится на тебе (виртуальная примерка), сохрани в избранное или собери заново.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="cta">
+        <span class="hand">перестань стоять у шкафа</span>
+        <h2>Начни собирать образы<br>за 2 минуты</h2>
+        <p>Бесплатно, без карты и без записи к стилисту. Только твой гардероб и немного магии.</p>
+        <div class="cta-btns">
+          <a href="#demo" class="btn btn-lime">Собрать первый образ</a>
+          <a href="#values" class="btn" style="background:rgba(255,255,255,.15);color:#fff;backdrop-filter:blur(8px)">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-row">
+        <div class="logo" style="font-size:18px"><span class="dot"></span>Цифровой стилист<span style="color:var(--violet)"></span></div>
+        <div class="foot-links">
+          <a href="#values">Почему мы</a>
+          <a href="#demo">Демо</a>
+          <a href="#how">Как работает</a>
+          <a href="#">Приватность</a>
+        </div>
+        <div>© 2026 · Сделано с любовью к гардеробу</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
